@@ -1,0 +1,58 @@
+
+public class Output {
+	public static void main(String[] args) {
+		Person peter, smith, jack;
+		peter = new Person();
+		peter.name = "Peter";
+		peter.age = "24";
+		peter.jobTitle = "Clown";
+		smith = new Person();
+		smith.name = "Smith";
+		smith.age = "32";
+		smith.jobTitle = "Landlord";
+		jack = new Person();
+		jack.name = "Jack";
+		jack.age = "28";
+		jack.jobTitle = "Barkeep";
+		
+		
+		
+		
+		String peterArray[] = {peter.name, peter.age, peter.jobTitle};
+		String smithArray[] = {smith.name, smith.age, smith.jobTitle};
+		String jackArray[] = {jack.name, jack.age, jack.jobTitle};
+		
+		String peopleArray[][] = {peterArray, smithArray, jackArray};
+		
+		for (String indarray[] : peopleArray) {
+			for (String j : indarray) {
+				System.out.println(j);
+			}
+		}
+		
+		String searchedArray[] = Search("Peter", peopleArray);
+		if (searchedArray == null) {
+			System.out.println("Name not found in Array");
+		}
+		else {
+			for (String i: searchedArray) {
+				System.out.print(i + ", ");
+			}
+//			System.out.println(Search("Peter", peopleArray));
+		}
+		
+//		create a method that searches for the person object by their name
+		
+		
+	}
+	
+	public static String[] Search(String name, String arraybig[][]) {
+		for (String indarray[] : arraybig) {
+			if (indarray[0] == name) {
+				return indarray;
+			}}
+		return null;
+			}
+		
+	}
+

@@ -1,0 +1,11 @@
+
+public class ParametersAndOperators {
+	public static void main(String[] args) {
+		System.out.println(Sum(4,5));
+	}
+	
+	public static int Sum(int x, int y) {
+		return (x + y);
+	}
+
+}

@@ -1,0 +1,12 @@
+
+public class IntChallenge {
+	public static void main(String[] args) {
+		int x;
+		int y;
+		int z;
+		x = 42;
+		y = x /10;
+		z = x -(y*10);
+		System.out.println(y+z);
+	}
+}

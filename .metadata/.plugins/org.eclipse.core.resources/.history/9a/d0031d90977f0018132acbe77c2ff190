@@ -1,0 +1,25 @@
+
+public class School {
+	public static void main(String[] args) {
+		Results peter, smith, jack;
+		peter = new Results();
+		smith = new Results();
+		jack = new Results();
+		peter.Name("Peter");
+		peter.Physics(100);
+		peter.Chemistry(50);
+		peter.Maths(100);
+		peter.ShowResults();
+		smith.Name("Smith");
+		smith.Physics(195);
+		smith.Chemistry(192);
+		smith.Maths (95);
+		smith.ShowResults();
+		jack.Name("Jack");
+		jack.Physics(32);
+		jack.Chemistry(26);
+		jack.Maths(9870);
+		jack.ShowResults();				
+	}
+
+}

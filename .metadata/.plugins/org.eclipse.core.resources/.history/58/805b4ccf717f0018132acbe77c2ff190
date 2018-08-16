@@ -1,0 +1,9 @@
+
+public class Blackjack {
+	public static void main(String[] args) {
+		int x; 
+		int y; 
+		float random = (float )(Math.random()+1);
+		System.out.print(random);
+	}
+}

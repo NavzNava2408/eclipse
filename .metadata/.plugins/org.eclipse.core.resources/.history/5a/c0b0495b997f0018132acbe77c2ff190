@@ -1,0 +1,39 @@
+
+public class Output {
+	public static void main(String[] args) {
+		Person peter, smith, jack;
+		peter = new Person();
+		peter.name = "Peter";
+		peter.age = 24;
+		peter.jobTitle = "Clown";
+		smith = new Person();
+		smith.name = "Smith";
+		smith.age = 32;
+		smith.jobTitle = "Landlord";
+		jack = new Person();
+		jack.name = "Jack";
+		jack.age = 28;
+		jack.jobTitle = "Barkeep";
+		
+		String names[] = {peter, smith, jack};
+		for (String i: names) {
+			int array[] = {i.name, i.age, i.jobTitle};
+		}
+		System.out.println(peter.Print());
+		System.out.println(smith.Print());
+		System.out.println(jack.Print());
+		
+		
+	//	
+//		create some example objects
+	//	
+//		create an array list and store those objects
+	//	
+//		enhanced loop to output your people (for i: array)
+	//	
+//		create a method that searches for the person object by their name
+		
+		
+		
+	}
+}

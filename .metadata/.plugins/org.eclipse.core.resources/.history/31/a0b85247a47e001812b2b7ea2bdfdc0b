@@ -1,0 +1,9 @@
+
+public class IntChallenge2 {
+	public static void main(String[] args) {
+		int x;
+		int y;
+		x = 486;
+		System.out.println((int) x/100 + ((x-(x/100)*100)/10) + ((((x-(x/100)*100)/10)*10)/10));
+	}
+}

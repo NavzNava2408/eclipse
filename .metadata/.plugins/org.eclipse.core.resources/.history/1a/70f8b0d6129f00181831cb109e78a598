@@ -1,0 +1,52 @@
+package org.seleniumhq.selenium.selenium;
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Demo {
+		
+		ChromeDriver driver;
+		String url = "http://php.thedemosite.co.uk/index.php";
+		
+		@Before
+		public void setup() {
+			System.setProperty("webdriver.chrome.driver", "C:\\chromedriver_win32/chromedriver.exe");
+			driver = new ChromeDriver();
+			driver.manage().window().maximize();
+		}
+		
+		@After
+		public void teardown() {
+			try {
+			Thread.sleep(2000);
+			}
+			catch(InterruptedException e) {
+				e.printStackTrace();
+			}
+			driver.quit();
+		}
+		
+		@Test
+		public void mthodTest() {
+			driver.get(url);
+			
+			//searchbar.sendKeys("fainting goats");
+			//searchbar.sendKeys(Keys.ENTER);
+			WebElement ulink = driver.findElement(By.linkText("4. Login"));
+			ulink.click();
+			WebElement insuname = driver.findElement(By.name("username"));
+			insuname.sendKeys("qauser");
+			driver.findElement(By.name("password")).sendKeys("password");
+			driver.findElement(By.name("FormsButton2")).click();
+			assertEquals("**Successful Login**",driver.findElement(By.xpath("/html/body/table/tbody/tr/td[1]/big/blockquote/blockquote/font/center/b")).getText());
+		}
+
+	}
+
+

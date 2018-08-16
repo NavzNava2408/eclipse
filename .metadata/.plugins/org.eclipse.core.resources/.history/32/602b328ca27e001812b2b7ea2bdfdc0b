@@ -1,0 +1,9 @@
+
+public class IntChallenge {
+	public static void main(String[] args) {
+		int x;
+		x = 39;
+		//System.out.println((int)(((int)(x/10)) + ((int)(x-(x/10)))));
+		System.out.println(x/10-x%10 - x%10);
+	}
+}

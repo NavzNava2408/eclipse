@@ -1,0 +1,12 @@
+
+public class Person {
+	String name;
+	int age;
+	String jobTitle;
+	System.out.println(PrintPerson());
+
+
+	public String PrintPerson() {
+		return (name + age + jobTitle);
+}
+}

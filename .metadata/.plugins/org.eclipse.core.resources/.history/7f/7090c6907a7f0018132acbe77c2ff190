@@ -1,0 +1,10 @@
+
+public class First {
+	public static void main(String[] args) {
+		Second x;
+		x = new Second();
+		x.a = 75;
+		x.Msg(); 
+		System.out.print(Second());
+	}
+}

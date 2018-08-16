@@ -1,0 +1,10 @@
+
+public class IntChallenge2 {
+	public static void main(String[] args) {
+		int x;
+		int y;
+		x = 456;
+		y = (x-(x/100)*100);
+		System.out.println((int) (x/100)  +  (y-(y/10)*10));
+	}
+}

@@ -1,0 +1,40 @@
+
+public class Results {
+	private int phys = -5;
+	private int chem = -5;
+	private int math = -5;
+	private String name;
+	private float tot, per;
+	
+	void Physics(int a) {
+		if (a>=0 && a<=150) phys = a;
+		else System.out.println(name + " has a valid mark for physics");
+	}
+	
+	void Chemistry(int a) {
+		if (a>=0 && a<=150) chem = a;
+		else System.out.println(name + " has valid mark for chemistry");
+	}
+	
+	void Maths(int a) {
+		if (a>=0 && a<=150) math = a;
+		else System.out.println(name + " has valid mark for maths");
+	}
+	
+	void Name(String a) {
+		name = a;
+	}
+	
+	public void ShowResults() {
+		if (phys < 0 || chem < 0 || math < 0) {
+			System.out.println("\tCould not display total or percentage for " + name);
+		}
+		else {
+		tot = phys + chem + math;
+		per = tot * 100/450;
+		System.out.println("\n" + name + ":");
+		System.out.println("Total: " + tot);
+		System.out.println("Percentage: " + per);
+		}
+	}
+}

@@ -1,0 +1,12 @@
+
+
+public class Parameters {
+	public static void main(String[] args) {
+		Print("Hello World!");
+		
+	}
+	
+	static void Print(x) {
+		System.out.println(x);
+	}
+}

@@ -1,0 +1,16 @@
+
+public class SubjectAdditions {
+	public static void main (String[] args) {
+
+		public static 
+		int Phys; 
+		int Chem; 
+		int Math;
+		int Total;
+		Phys = 75;
+		Chem = 92;
+		Math = 100;
+		Total = Phys + Chem + Math;
+		System.out.println("Hello World!");
+	}
+}

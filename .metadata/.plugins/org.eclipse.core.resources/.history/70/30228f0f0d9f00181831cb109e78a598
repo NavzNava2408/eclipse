@@ -1,0 +1,40 @@
+package org.seleniumhq.selenium.ex1;
+
+import org.junit.Test;
+
+public class DemoSite {
+	ChromeDriver driver;
+	String url = "https://www.youtube.com/";
+	
+	@Before
+	public void setup() {
+		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver_win32/chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+	}
+	
+	@After
+	public void teardown() {
+		try {
+		Thread.sleep(2000);
+		}
+		catch(InterruptedException e) {
+			e.printStackTrace();
+		}
+		driver.quit();
+	}
+	
+	@Test
+	public void mthodTest() {
+		driver.get(url);
+		WebElement searchbar = driver.findElement(By.id("search"));
+		searchbar.sendKeys("fainting goats");
+		searchbar.sendKeys(Keys.ENTER);
+		WebElement link = driver.findElement(By.linkText("Best of Fainting Goats | EpicVirals | [HD]"));
+		link.click();
+	}
+
+}
+
+
+}

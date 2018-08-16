@@ -1,0 +1,27 @@
+
+public class Output {
+	public static void main(String[] args) {
+		Person Peter;
+		Peter = new Person();
+		Peter.name = "Peter";
+		Peter.age = 24;
+		Peter.jobTitle = "Clown";
+		Peter.Print();
+//		name
+//		age
+//		job title
+	//	
+//		formatted string is : "age: " + age etc.
+	//	
+//		create some example objects
+	//	
+//		create an array list and store those objects
+	//	
+//		enhanced loop to output your people (for i: array)
+	//	
+//		create a method that searches for the person object by their name
+		
+		
+		
+	}
+}

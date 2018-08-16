@@ -1,0 +1,16 @@
+package org.seleniumhq.selenium.ex1;
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+public class DemoSite {
+	
+	ChromeDriver driver;
+	
+	@Before
+	public void setup() {
+		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver_win32/chromedriver.exe");
+		driver = new ChromeDriver();
+		
+	}
+
+}

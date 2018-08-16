@@ -1,0 +1,11 @@
+
+public class Float_experiment {
+
+	public static void main(String[] args) {
+		float x;
+		x = 5/2;
+		System.out.println(x);
+
+	}
+
+}

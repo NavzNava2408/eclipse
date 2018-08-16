@@ -1,0 +1,44 @@
+package org.seleniumhq.selenium.selenium;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class WebStuff {
+	ChromeDriver driver;
+	String url = "https://www.youtube.com/";
+	
+	@Before
+	public void setup() {
+		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver_win32/chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+	}
+	
+	@After
+	public void teardown() {
+		try {
+		Thread.sleep(2000);
+		}
+		catch(InterruptedException e) {
+			e.printStackTrace();
+		}
+		driver.quit();
+	}
+	
+	@Test
+	public void mthodTest() {
+		driver.get(url);
+		WebElement searchbar = driver.findElement(By.id("search"));
+		searchbar.sendKeys("fainting goats");
+		searchbar.sendKeys(Keys.ENTER);
+		driver.findElement(By.linkText("Best of Fainting Goats | EpicVirals | [HD]")).click();
+	}
+
+}

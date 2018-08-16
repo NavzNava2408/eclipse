@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="DemoQA" project="selenium" tests="2" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="org.seleniumhq.selenium.selenium.DemoQA" incomplete="true">
+    <testcase name="ddtreg" classname="org.seleniumhq.selenium.selenium.DemoQA" incomplete="true"/>
+    <testcase name="mthodTest" classname="org.seleniumhq.selenium.selenium.DemoQA" incomplete="true"/>
+  </testsuite>
+</testrun>

@@ -1,0 +1,17 @@
+
+public class Conditionals {
+	public static void main(String[] args) {
+		int output = MathStuff(5,6,false);
+		System.out.println(output);
+	}
+	
+	public static int MathStuff(int x, int y, boolean z) {
+		if (z == true) {
+			return x + y;
+		}
+		else {
+			return x*y;
+		}
+	}
+
+}

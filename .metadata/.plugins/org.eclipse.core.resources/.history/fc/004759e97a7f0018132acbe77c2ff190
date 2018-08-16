@@ -1,0 +1,15 @@
+
+public class Second {
+	int x = 0;
+	public void Msg() {
+		System.out.print("Hello my friend!");
+		if (x != 0) {
+			System.out.println(" You put " + x + " into the a variable");
+			}
+		else {
+			System.out.println();
+		}
+	}
+	}
+
+

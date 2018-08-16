@@ -1,0 +1,29 @@
+
+public class Switch {
+	public static void main(String[] args) {
+		int day = 3 ;
+		switch (day) {
+		
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+		System.out.println("Garfield hates Mondays");
+		break;
+		
+		case 6:
+		System.out.println("Saturday");
+		break;
+		
+		case 7:
+		System.out.println("Sunday");
+		break;
+		
+		default:
+		System.out.println("Not a day");
+		break;
+		
+		}
+	}
+}

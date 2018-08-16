@@ -1,0 +1,99 @@
+package org.seleniumhq.selenium.teasite;
+
+import static org.junit.Assert.assertEquals;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.PageFactory;
+
+
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+
+import cucumber.api.PendingException;
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class teasteps {
+	
+	WebDriver driver;
+	String url;
+	public ExtentReports report;
+	public ExtentTest test;
+	
+	public teasteps() {
+	report = new ExtentReports("C:\\Users\\Admin\\Desktop\\CucumberReports\\Reports.html", true);
+	report.flush();
+	}
+	
+	@Before
+	public void setup() {
+		report = new ExtentReports("C:\\Users\\Admin\\Desktop\\CucumberReports\\Reports.html", false);
+		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver_win32/chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+	}
+	
+	@Given("^the correct web address$")
+	public void the_correct_web_address() {
+		
+		url = "http://www.practiceselenium.com/welcome.html";
+		driver.get(url);
+		
+	}
+
+	@When("^I navigate to the 'Menu' page$")
+	public void i_navigate_to_the_Menu_page() {
+		test = report.startTest("Navigating to Menu on Tea site");
+		test.log(LogStatus.INFO, "Browser started");
+		teahome th = PageFactory.initElements(driver, teahome.class);
+		th.clickmenu();
+		test.log(LogStatus.INFO, "Menu button clicked");
+	}
+
+	@Then("^I can browse a list of the available products\\.$")
+	public void i_can_browse_a_list_of_the_available_products() {
+		teamenu tm = PageFactory.initElements(driver, teamenu.class);
+		if (tm.greentext().equals("Green Tea") & tm.mhtext().equals("Menu")) {
+			test.log(LogStatus.PASS, "Navigating to Menu on Tea Site");
+		} else {
+			test.log(LogStatus.FAIL, "Navigating to Menu on Tea Site");
+		}
+		report.endTest(test);
+		assertEquals("Menu",tm.mhtext());
+
+	}
+
+	@When("^I click the checkout button$")
+	public void i_click_the_checkout_button() {
+		test = report.startTest("Navigating to Checkout on Tea site");
+		teahome th = PageFactory.initElements(driver, teahome.class);
+		th.clickcheckout();
+		test.log(LogStatus.INFO, "Checkout button clicked");
+	}
+
+	@Then("^I am taken to the checkout page$")
+	public void i_am_taken_to_the_checkout_page() {
+		teaco tco = PageFactory.initElements(driver, teaco.class);
+		if(tco.cohtext().equals("Pay with Credit Card or Log In")) {
+			test.log(LogStatus.PASS, "Navigating to Checkout on Tea site");
+		} else {
+			test.log(LogStatus.FAIL, "Navigating to Checkout on Tea site");
+		}
+		report.endTest(test);
+		assertEquals("Pay with Credit Card or Log In",tco.cohtext());
+	}
+	
+	@After
+	public void teardown() {
+		driver.quit();
+		report.flush();
+	}
+
+
+}

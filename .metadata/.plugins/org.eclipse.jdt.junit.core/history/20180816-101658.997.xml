@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="BlackJackTestRunner" project="feature" tests="18" started="18" failures="0" errors="0" ignored="18">
+  <testsuite name="org.seleniumhq.selenium.feature.BlackJackTestRunner" time="0.081">
+    <testsuite name="Feature: Playing the game of BlackJack" time="0.081">
+      <testsuite name="Scenario: Drawing lower than computer whilst they draw under Twenty-One" time="0.001" incomplete="true">
+        <skipped/>
+        <testcase name="Given an integer a and an integer b" classname="Scenario: Drawing lower than computer whilst they draw under Twenty-One" time="0.001" ignored="true"/>
+        <testcase name="When a is less than b and b is less than Twenty-One" classname="Scenario: Drawing lower than computer whilst they draw under Twenty-One" time="0.0" ignored="true"/>
+        <testcase name="Then b is returned" classname="Scenario: Drawing lower than computer whilst they draw under Twenty-One" time="0.0" ignored="true"/>
+      </testsuite>
+      <testsuite name="Scenario: Drawing under Twenty-One whilst they draw above Twenty-One" time="0.0" incomplete="true">
+        <skipped/>
+        <testcase name="Given an integer a and an integer b which is above Twenty-One" classname="Scenario: Drawing under Twenty-One whilst they draw above Twenty-One" time="0.0" ignored="true"/>
+        <testcase name="When an integer a and b is above Twenty-One" classname="Scenario: Drawing under Twenty-One whilst they draw above Twenty-One" time="0.0" ignored="true"/>
+        <testcase name="Then a is returned" classname="Scenario: Drawing under Twenty-One whilst they draw above Twenty-One" time="0.0" ignored="true"/>
+      </testsuite>
+      <testsuite name="Scenario: Drawing higher than computer and lower than Twenty-One" time="0.0" incomplete="true">
+        <skipped/>
+        <testcase name="Given an integer a and an integer b" classname="Scenario: Drawing higher than computer and lower than Twenty-One" time="0.0" ignored="true"/>
+        <testcase name="When a is greater than b and a is less than Twenty-One" classname="Scenario: Drawing higher than computer and lower than Twenty-One" time="0.0" ignored="true"/>
+        <testcase name="Then a is returned" classname="Scenario: Drawing higher than computer and lower than Twenty-One" time="0.0" ignored="true"/>
+      </testsuite>
+      <testsuite name="Scenario: Drawing higher than computer and under Twenty-One whilst they draw above Twenty-One" time="0.0" incomplete="true">
+        <skipped/>
+        <testcase name="Given an integer a and an integer b which is above Twenty-One" classname="Scenario: Drawing higher than computer and under Twenty-One whilst they draw above Twenty-One" time="0.0" ignored="true"/>
+        <testcase name="When a is higher than b and less than Twenty-One and b is above Twenty-One" classname="Scenario: Drawing higher than computer and under Twenty-One whilst they draw above Twenty-One" time="0.0" ignored="true"/>
+        <testcase name="Then a is returned" classname="Scenario: Drawing higher than computer and under Twenty-One whilst they draw above Twenty-One" time="0.0" ignored="true"/>
+      </testsuite>
+      <testsuite name="Scenario: Drawing the same as the computer and both under Twenty-One" time="0.0" incomplete="true">
+        <skipped/>
+        <testcase name="Given an integer a and an integer b which are both under Twenty-One" classname="Scenario: Drawing the same as the computer and both under Twenty-One" time="0.0" ignored="true"/>
+        <testcase name="When an integer a and b both under Twenty-One" classname="Scenario: Drawing the same as the computer and both under Twenty-One" time="0.0" ignored="true"/>
+        <testcase name="Then the identical value of a and b is returned" classname="Scenario: Drawing the same as the computer and both under Twenty-One" time="0.0" ignored="true"/>
+      </testsuite>
+      <testsuite name="Scenario: Drawing the same as the computer and both over Twenty-One" time="0.0" incomplete="true">
+        <skipped/>
+        <testcase name="Given an integer a and an integer b which are both over Twenty-One" classname="Scenario: Drawing the same as the computer and both over Twenty-One" time="0.0" ignored="true"/>
+        <testcase name="When an integer a and b both over Twenty-One" classname="Scenario: Drawing the same as the computer and both over Twenty-One" time="0.0" ignored="true"/>
+        <testcase name="Then then Zero is returned" classname="Scenario: Drawing the same as the computer and both over Twenty-One" time="0.0" ignored="true"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

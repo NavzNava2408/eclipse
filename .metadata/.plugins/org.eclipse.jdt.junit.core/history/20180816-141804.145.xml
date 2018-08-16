@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="teastrunner" project="teasite" tests="6" started="6" failures="0" errors="0" ignored="0">
+  <testsuite name="org.seleniumhq.selenium.teasite.teastrunner" time="17.467">
+    <testsuite name="Feature: Shopping on a website" time="17.467">
+      <testsuite name="Scenario: Browse the items available on the website" time="1.25">
+        <testcase name="Given the correct web address" classname="Scenario: Browse the items available on the website" time="0.422"/>
+        <testcase name="When I navigate to the 'Menu' page" classname="Scenario: Browse the items available on the website" time="0.13"/>
+        <testcase name="Then I can browse a list of the available products." classname="Scenario: Browse the items available on the website" time="0.698"/>
+      </testsuite>
+      <testsuite name="Scenario: Add an item to the checkout" time="1.287">
+        <testcase name="Given the correct web address" classname="Scenario: Add an item to the checkout" time="0.529"/>
+        <testcase name="When I click the checkout button" classname="Scenario: Add an item to the checkout" time="0.071"/>
+        <testcase name="Then I am taken to the checkout page" classname="Scenario: Add an item to the checkout" time="0.687"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

@@ -1,0 +1,31 @@
+
+public class IfStatements3 {
+	public static void main(String[] args) {
+		String Name = "Dave";
+		float Salary = 20000.00f;
+		float Tax;
+		float NetSalary;
+		if	(Salary <= 11850) {
+			Tax = 0f;
+			NetSalary = Salary - Tax;
+			
+		};
+		
+		if (Salary > 11850) {
+			Tax = (float) ((Salary - 11850)*0.2);
+			NetSalary = Salary - Tax;
+		}
+		
+		if (Salary > 32001) {
+			Tax = (float) (Salary - ((Salary - 32001)* 0.4 + (32001-11850)*0.2));
+			NetSalary = Salary - Tax;
+		}
+		
+		System.out.println("Name: " + Name);
+		System.out.println("Salary: " + Salary);
+		System.out.println("Tax: " + Tax);
+		System.out.println("Net Salary: " + NetSalary);
+	
+	}
+
+}
